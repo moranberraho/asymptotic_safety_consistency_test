@@ -52,12 +52,17 @@ To reproduce in Colab:
    together with a structured summary of inputs and results.
 
 6. Run the robustness analysis:
-   python robustness_analysis.py
+	a) Main robustness tests:
+      python robustness_analysis.py
+
+   	b) Infrared slip robustness scan:
+      python slip_analysis.py   
 
    This will perform:
    - activation profile robustness tests,
    - threshold factor F sensitivity scans,
    - supplementary consistency checks,
+   - a systematic scan of the gravitational slip parameter and quantifies the stability of the UV–IR consistency relation.
    and will generate the figures used in the manuscript’s supplementary material.
 
 7. Verify reproducibility:
@@ -69,8 +74,16 @@ To reproduce in Colab:
    - "Analysis completed successfully!"
    - "Both robustness tests PASSED"
 
+The slip parameter robustness analysis is conditionally dependent on the ultraviolet
+constraint obtained from the main pipeline; it is therefore intended as a consistency
+and stability test, not as an independent UV inference.
+
 No external datasets are required. All inputs are self-contained, and the
 analysis is fully deterministic.
+
+All scripts in this repository are archived under the same Zenodo concept DOI.
+Individual releases correspond to versioned snapshots of the full analysis pipeline.
+
 
 
 
